@@ -1,0 +1,245 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5911456974559061511
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 681804476555430622}
+  - component: {fileID: 70896714185856809}
+  m_Layer: 0
+  m_Name: HUD Element Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &681804476555430622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911456974559061511}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2525120291949211331}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70896714185856809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911456974559061511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a5fc50cb592fe4f95457eb6d66e520, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Settings: {fileID: 0}
+  Prefabs:
+    RadarPrefab: {fileID: 114649513964931752, guid: 7df08e2a2fd0940469fa781e26554019,
+      type: 3}
+    CompassBarPrefab: {fileID: 114875581833013858, guid: d04e4256c86dfc4439da3d1b4407458e,
+      type: 3}
+    IndicatorPrefab: {fileID: 114774112296258654, guid: 43ca8a78e154fef43a69247ce19eadc6,
+      type: 3}
+    MinimapPrefab: {fileID: 114416010850775958, guid: a8f2acb57900dfa4fa38df814b1b9a5c,
+      type: 3}
+  hideInRadar: 0
+  ignoreRadarRadius: 0
+  ignoreRadarScaling: 0
+  ignoreRadarFading: 0
+  rotateWithGameObject: 1
+  useRadarHeightSystem: 1
+  hideInCompassBar: 0
+  ignoreCompassBarRadius: 0
+  useCompassBarDistanceText: 1
+  compassBarDistanceTextFormat: '{0}m'
+  showIndicator: 1
+  showOffscreenIndicator: 1
+  ignoreIndicatorRadius: 1
+  ignoreIndicatorHideDistance: 1
+  ignoreIndicatorScaling: 0
+  ignoreIndicatorFading: 1
+  useIndicatorDistanceText: 1
+  showOffscreenIndicatorDistance: 0
+  indicatorOnscreenDistanceTextFormat: '{0}m'
+  indicatorOffscreenDistanceTextFormat: '{0}'
+  hideInMinimap: 0
+  ignoreMinimapRadius: 0
+  ignoreMinimapScaling: 0
+  ignoreMinimapFading: 0
+  rotateWithGameObjectMM: 1
+  useMinimapHeightSystem: 1
+  OnElementReady:
+    m_PersistentCalls:
+      m_Calls: []
+  OnElementUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAppear:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDisappear:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEnterRadius:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeaveRadius:
+    m_PersistentCalls:
+      m_Calls: []
+  IsActive: 1
+  Radar: {fileID: 0}
+  CompassBar: {fileID: 0}
+  Indicator: {fileID: 0}
+  Minimap: {fileID: 0}
+  IsInRadarRadius: 0
+  IsInCompassBarRadius: 0
+  IsInIndicatorRadius: 0
+  IsInMinimapRadius: 0
+--- !u!1001 &2525120291949343811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_Name
+      value: Prism
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -56
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dee95a1a7618983418c8fe51eda6e5b6, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 681804476555430622}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 795a2bbb6f5e726499bc44e9ae463bd8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8638437215210246531}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 795a2bbb6f5e726499bc44e9ae463bd8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9089621264849928590}
+  m_SourcePrefab: {fileID: 100100000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+--- !u!4 &2525120291949211331 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 795a2bbb6f5e726499bc44e9ae463bd8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2525120291949343811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2525120291949310691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 795a2bbb6f5e726499bc44e9ae463bd8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2525120291949343811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8638437215210246531
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525120291949310691}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 795a2bbb6f5e726499bc44e9ae463bd8, type: 3}
+--- !u!114 &9089621264849928590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525120291949310691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17300b53e46c36042a725ed90877de88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 35
