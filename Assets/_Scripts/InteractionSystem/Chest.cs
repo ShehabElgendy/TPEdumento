@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Chest : MonoBehaviour, IInteractable
 {
-    [SerializeField]
-    private string prompt;
-    public string InteractionPrompt => prompt;
+
+    public UnityEvent ChestEvent;
+
+    public UnityEvent Event { get => ChestEvent; }
 
     private bool isOpen;
 
@@ -14,9 +14,14 @@ public class Chest : MonoBehaviour, IInteractable
     {
         if (!isOpen)
         {
-            Debug.Log("OpeningChest");
+            ChestEvent?.Invoke();
             isOpen = true;
         }
         return true;
+    }
+
+    public void ChestInteraction()
+    {
+        Debug.Log("UnityEvent Chest");
     }
 }

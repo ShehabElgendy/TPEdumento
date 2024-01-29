@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    [SerializeField]
-    private string prompt;
 
-    public string InteractionPrompt => prompt;
+    public UnityEvent DoorEvent;
 
+    public UnityEvent Event { get => DoorEvent; }
 
     public bool Interact(Interactor _interactor)
     {
-        Debug.Log("OpeningDoor");
+        DoorEvent?.Invoke();
         return true;
+    }
+
+    public void DoorInteraction()
+    {
+        Debug.Log("UnityEvent Door");
     }
 }
