@@ -1,31 +1,22 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Chest : MonoBehaviour, IInteractable
+public class Chest : InteractOnTrigger
 {
-
-    public UnityEvent ChestEvent;
-
     private bool isOpen;
-
-    public bool Interact(Interactor _interactor)
-    {
-
-        ChestEvent?.Invoke();
-        isOpen = !isOpen;
-
-        return true;
-    }
 
     private void Update()
     {
         if (isOpen)
         {
-            transform.Rotate(0f, 75f * Time.deltaTime, 0f);
+            transform.parent.Rotate(0f, 75f * Time.deltaTime, 0f);
         }
     }
+
     public void ChestInteraction()
     {
+        isOpen = !isOpen;
         Debug.Log("UnityEvent Chest");
     }
+
 }

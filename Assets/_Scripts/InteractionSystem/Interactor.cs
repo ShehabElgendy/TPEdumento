@@ -11,13 +11,14 @@ public class Interactor : MonoBehaviour
     [SerializeField]
     private LayerMask interactableMask;
 
+    [SerializeField]
     private int interactablesFound;
 
     private readonly Collider[] colliders = new Collider[3];
 
     private IInteractable interactable;
 
-    public void Interact()
+    public virtual void Interact()
     {
         interactablesFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionPointRadius, colliders, interactableMask);
 
@@ -29,8 +30,9 @@ public class Interactor : MonoBehaviour
                 interactable.Interact(this);
 
         }
-    }
 
+        interactable = null;
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

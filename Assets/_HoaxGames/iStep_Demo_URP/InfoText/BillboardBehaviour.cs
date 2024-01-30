@@ -14,14 +14,8 @@ public class BillboardBehaviour : MonoBehaviour
         m_transform = this.transform;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         Vector3 dirVec = m_lookAtTarget.position - m_transform.position;
         if (m_onlyAroundUpAxis)
