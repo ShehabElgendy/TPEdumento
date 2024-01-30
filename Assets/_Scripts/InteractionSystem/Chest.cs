@@ -6,20 +6,24 @@ public class Chest : MonoBehaviour, IInteractable
 
     public UnityEvent ChestEvent;
 
-    public UnityEvent Event { get => ChestEvent; }
-
     private bool isOpen;
 
     public bool Interact(Interactor _interactor)
     {
-        if (!isOpen)
-        {
-            ChestEvent?.Invoke();
-            isOpen = true;
-        }
+
+        ChestEvent?.Invoke();
+        isOpen = !isOpen;
+
         return true;
     }
 
+    private void Update()
+    {
+        if (isOpen)
+        {
+            transform.Rotate(0f, 75f * Time.deltaTime, 0f);
+        }
+    }
     public void ChestInteraction()
     {
         Debug.Log("UnityEvent Chest");

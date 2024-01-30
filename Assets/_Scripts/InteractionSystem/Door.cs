@@ -6,12 +6,23 @@ public class Door : MonoBehaviour, IInteractable
 
     public UnityEvent DoorEvent;
 
-    public UnityEvent Event { get => DoorEvent; }
+    private bool isOpen;
 
     public bool Interact(Interactor _interactor)
     {
+
         DoorEvent?.Invoke();
+        isOpen = !isOpen;
+
         return true;
+    }
+
+    private void Update()
+    {
+        if (isOpen)
+        {
+            transform.Rotate(0f, 75f * Time.deltaTime, 0f);
+        }
     }
 
     public void DoorInteraction()
