@@ -19,6 +19,8 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     private void OnTriggerEnter(Collider other)
     {
+        var renderer = GetComponent<InteractOnTrigger>().GetComponentInParent<Renderer>().material;
+        renderer.EnableKeyword("_EMISSION");
         ExecuteOnEnter(other);
     }
 
@@ -29,6 +31,8 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     private void OnTriggerExit(Collider other)
     {
+        var renderer = GetComponent<InteractOnTrigger>().GetComponentInParent<Renderer>().material;
+        renderer.DisableKeyword("_EMISSION");
         ExecuteOnExit(other);
     }
 

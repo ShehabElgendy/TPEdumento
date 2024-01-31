@@ -4620,7 +4620,7 @@ GameObject:
   - component: {fileID: 1442334606}
   - component: {fileID: 1442334605}
   - component: {fileID: 1442334604}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4668,7 +4668,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: af4ddd37380754e48b04c5c3645d715e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6529,7 +6529,7 @@ GameObject:
   - component: {fileID: 2142122758}
   - component: {fileID: 2142122757}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: InfoZone01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6543,12 +6543,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142122755}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.75, y: 0.66, z: 2.02}
   m_LocalScale: {x: 6.8069563, y: 6.8069563, z: 6.8069563}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 954887522101512864}
+  m_Children:
+  - {fileID: 954887522101512864}
+  m_Father: {fileID: 4762801172880213765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2142122757
 MeshRenderer:
@@ -10159,13 +10160,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6948662132360417669}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.75, y: 0.66, z: 2.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.14690854, y: 0.14690854, z: 0.14690854}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2142122756}
-  m_Father: {fileID: 4762801172880213765}
+  m_Children: []
+  m_Father: {fileID: 2142122756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &972903909230860915
 Transform:
@@ -13729,7 +13729,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6948662132360417669}
+      - m_Target: {fileID: 2142122755}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
         m_Mode: 6
@@ -15716,7 +15716,7 @@ Transform:
   m_Children:
   - {fileID: 5300512172167965263}
   - {fileID: 6562903252503399102}
-  - {fileID: 954887522101512864}
+  - {fileID: 2142122756}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4786501121350401298
@@ -19002,7 +19002,7 @@ GameObject:
   - component: {fileID: 3379295729939748807}
   - component: {fileID: 3593574437270890512}
   m_Layer: 16
-  m_Name: InfoZone01
+  m_Name: InfoZone01Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19645,7 +19645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionPoint: {fileID: 958643057}
-  interactionPointRadius: 0.5
+  interactionPointRadius: 0.75
   interactableMask:
     serializedVersion: 2
     m_Bits: 64
