@@ -16,7 +16,7 @@ public class Chest : InteractOnTrigger
     public void ChestInteraction()
     {
         isOpen = !isOpen;
-        Debug.Log("UnityEvent Chest");
+        Debug.Log("Chest");
     }
 
 }

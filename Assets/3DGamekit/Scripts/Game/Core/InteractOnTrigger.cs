@@ -8,7 +8,9 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     public UnityEvent OnEnter, OnExit, OnInteract;
 
-    private new Collider collider;
+    protected new Collider collider;
+
+    protected bool isInteracted;
 
     private void Reset()
     {
@@ -19,8 +21,7 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     private void OnTriggerEnter(Collider other)
     {
-        var renderer = GetComponent<InteractOnTrigger>().GetComponentInParent<Renderer>().material;
-        renderer.EnableKeyword("_EMISSION");
+        EnableEmission();
         ExecuteOnEnter(other);
     }
 
@@ -31,8 +32,7 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     private void OnTriggerExit(Collider other)
     {
-        var renderer = GetComponent<InteractOnTrigger>().GetComponentInParent<Renderer>().material;
-        renderer.DisableKeyword("_EMISSION");
+        DisableEmission();
         ExecuteOnExit(other);
     }
 
@@ -41,14 +41,33 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
         OnExit.Invoke();
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawIcon(transform.position, "InteractionTrigger", false);
-    }
-
     public bool Interact(Interactor _interactor)
     {
+        isInteracted = !isInteracted;
+
+        if (isInteracted)
+        {
+            DisableEmission();
+        }
+        else if (!isInteracted)
+        {
+            EnableEmission();
+        }
+
         OnInteract.Invoke();
-        return _interactor;
+
+        return true;
+    }
+
+    protected virtual void DisableEmission()
+    {
+        var renderer = GetComponent<InteractOnTrigger>().GetComponentInParent<Renderer>().material;
+        renderer.DisableKeyword("_EMISSION");
+    }
+
+    protected virtual void EnableEmission()
+    {
+        var renderer = GetComponent<InteractOnTrigger>().GetComponentInParent<Renderer>().material;
+        renderer.EnableKeyword("_EMISSION");
     }
 }

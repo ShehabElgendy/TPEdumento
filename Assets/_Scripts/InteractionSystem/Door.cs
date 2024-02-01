@@ -16,6 +16,6 @@ public class Door : InteractOnTrigger
     public void DoorInteraction()
     {
         isOpen = !isOpen;
-        Debug.Log("UnityEvent Door");
+        Debug.Log("Door");
     }
 }
