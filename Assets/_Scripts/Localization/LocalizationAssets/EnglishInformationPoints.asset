@@ -17,7 +17,7 @@ MonoBehaviour:
   - key: INFO1
     value: Welcome to Edumento World
   - key: INFO2
-    value: Can I jump over this if I press SPACE?
+    value: Join us in this journey
   - key: INFO3
     value: This looks fun to smash stuff with! I'll try LEFT CLICK on my MOUSE and
       see what happens...
@@ -29,3 +29,7 @@ MonoBehaviour:
   - key: INFO5
     value: I wonder what those massive door crystals are for? I should look around
       for some more switches.
+  - key: Chest
+    value: Chest
+  - key: Door
+    value: Door

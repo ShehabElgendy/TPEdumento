@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb98d8da5f4a244490d8e8d0cfef54a, type: 3}
+  m_Name: FrenchInformationPoints
+  m_EditorClassIdentifier: 
+  language: French
+  phrases:
+  - key: INFO1
+    value: Bienvenue dans le monde d'Edumento
+  - key: INFO2
+    value: Rejoignez-nous dans ce voyage
+  - key: INFO3
+    value: 
+  - key: INFO4
+    value: 
+  - key: INFO4b
+    value: 
+  - key: INFO5
+    value: 
+  - key: Chest
+    value: Poitrine
+  - key: Door
+    value: Porte
+  originalPhrases: {fileID: 11400000, guid: 899297ab1f956a94093157cb24051fb1, type: 2}
