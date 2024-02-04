@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gamekit3D
-{
+
     [RequireComponent(typeof(SphereCollider))]
     public class InteractionTrigger : MonoBehaviour
     {
@@ -41,10 +40,4 @@ namespace Gamekit3D
             Gizmos.DrawIcon(transform.position, "InteractionTrigger", false);
         }
 
-        void OnDrawGizmosSelected()
-        {
-            //need to inspect events and draw arrows to relevant gameObjects.
-        }
-
     } 
-}

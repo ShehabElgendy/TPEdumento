@@ -1,8 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Gamekit3D
-{
+
     [CustomPropertyDrawer(typeof(Phrase))]
     public class PhraseDrawer : PropertyDrawer
     {
@@ -25,4 +24,3 @@ namespace Gamekit3D
             EditorGUI.PropertyField(propertyRect, valueProp, GUIContent.none);
         }
     }
-}

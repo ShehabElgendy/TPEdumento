@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Gamekit3D
-{
+
     [CustomEditor(typeof(Translator))]
     public class TranslatorEditor : Editor
     {
@@ -97,4 +96,3 @@ namespace Gamekit3D
             return true;
         }
     }
-}
