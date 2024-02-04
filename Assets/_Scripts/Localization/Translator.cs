@@ -36,7 +36,7 @@ namespace Gamekit3D
             get { return Instance.phrases[Instance.m_LanguageIndex].language; }
         }
 
-        public List<OriginalPhrases> phrases = new List<OriginalPhrases> ();
+        public List<OriginalPhrases> phrases = new();
 
         [SerializeField]
         protected int m_LanguageIndex;

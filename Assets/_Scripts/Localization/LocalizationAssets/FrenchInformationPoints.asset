@@ -31,7 +31,7 @@ MonoBehaviour:
   - key: Door
     value: Porte
   - key: Wizard1
-    value: Salut comment vas-tu
+    value: Salut comment vas-tu?
   - key: Wizard2
     value: "il semble comme une journ\xE9e ensoleill\xE9e"
   originalPhrases: {fileID: 11400000, guid: 899297ab1f956a94093157cb24051fb1, type: 2}

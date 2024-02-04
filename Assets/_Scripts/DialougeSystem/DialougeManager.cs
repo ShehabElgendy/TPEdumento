@@ -9,7 +9,8 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    public GameObject Dialogue;
+    [SerializeField]
+    private GameObject Dialogue;
 
     [SerializeField]
     private Image characterIcon;
@@ -23,14 +24,16 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private Queue<DialogueLine> lines;
 
-    private bool isDialogueActive = false;
+    [SerializeField]
+    private float typingSpeed = 0.5f;
 
     [SerializeField]
-    private float typingSpeed = 0.01f;
+    private Animator animator;
 
-    public Animator animator;
+    [SerializeField]
+    private string[] DialougePhraseKey;
 
-    public string[] DialougePhraseKey;
+    private bool isDialogueActive;
 
     private int currentIndex;
 
@@ -105,6 +108,6 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDialogueActive = false;
-        animator?.SetBool("Active", false);
+        animator.SetBool("Active", false);
     }
 }
