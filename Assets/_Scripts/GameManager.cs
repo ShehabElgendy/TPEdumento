@@ -1,5 +1,6 @@
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,6 +49,12 @@ public class GameManager : MonoBehaviour
                 break;
             default:
                 break;
+        }
+
+        if(Input.GetKey(KeyCode.Q))
+        {
+            SceneManager.LoadScene("CharacterCustomization02_Gender");
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

@@ -21,7 +21,6 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     private void OnTriggerEnter(Collider other)
     {
-        EnableEmission();
         ExecuteOnEnter(other);
     }
 
@@ -32,7 +31,6 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     private void OnTriggerExit(Collider other)
     {
-        DisableEmission();
         ExecuteOnExit(other);
     }
 
@@ -43,15 +41,6 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor _interactor)
     {
-        if (isInteracted)
-        {
-            DisableEmission();
-        }
-        else if (!isInteracted)
-        {
-            EnableEmission();
-        }
-
         isInteracted = !isInteracted;
         OnInteract.Invoke();
 
