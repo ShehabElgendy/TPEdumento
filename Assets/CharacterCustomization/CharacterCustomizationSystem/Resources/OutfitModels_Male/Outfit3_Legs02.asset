@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outfitName: Belt
   outfitIcon: {fileID: 0}
-  isInvisible: 0
+  isInvisible: 1
   isLocked: 0
   sortingOrder: 0
   outfitCategoryScriptableObject: {fileID: 11400000, guid: e9eb00f9e7ddf5e4184b7ff1a73e9107,

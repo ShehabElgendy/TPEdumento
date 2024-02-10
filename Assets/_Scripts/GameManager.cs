@@ -1,6 +1,4 @@
 using StarterAssets;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -55,11 +53,11 @@ public class GameManager : MonoBehaviour
 
     public void DisablePlayerInput()
     {
-            starterAssetsInputs.SetCursorState(false);
+            starterAssetsInputs?.SetCursorState(false);
     }
 
     public void EnablePlayerInput()
     {
-            starterAssetsInputs.SetCursorState(true);
+            starterAssetsInputs?.SetCursorState(true);
     }
 }

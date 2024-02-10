@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687b4ae489f22ab438fd7071c06f6df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnType: 1
+  spawnType: 0
   characterBuilderFemale: {fileID: 2261834552512643778, guid: 9d86bb6377a3b9e408d2ec12be23b9e5,
     type: 3}
   characterBuilderMale: {fileID: 2261834552512643778, guid: eece7baef80558447a11a38e4f57774d,
@@ -739,8 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d1434695a072d4391e71642826b035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outfitScriptableObject: {fileID: 11400000, guid: 0476010a4c7e4164eb9371cf492da5b3,
-    type: 2}
+  outfitScriptableObject: {fileID: 0}
 --- !u!114 &880943163
 MonoBehaviour:
   m_ObjectHideFlags: 0

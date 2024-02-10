@@ -1,16 +1,6 @@
-﻿/******************************************************************************************************
-
-Copyright (c) Comfort Games and its affiliates. All rights reserved.
-Unless required by applicable law or agreed to in writing,
-the code is provided "AS IS" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
-******************************************************************************************************/
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-namespace ComfortGames.CharacterCustomization {
 
     public class IconGenerator : MonoBehaviour {
 
@@ -96,4 +86,3 @@ namespace ComfortGames.CharacterCustomization {
             System.IO.File.WriteAllBytes(CharacterCustomizationAssetManager.GetIconGeneratorPath(iconName), targetTexture.EncodeToPNG());
         }
     }
-}

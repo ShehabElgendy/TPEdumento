@@ -1,17 +1,7 @@
-﻿/******************************************************************************************************
-
-Copyright (c) Comfort Games and its affiliates. All rights reserved.
-Unless required by applicable law or agreed to in writing,
-the code is provided "AS IS" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
-******************************************************************************************************/
-
-using System.IO;
+﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Collections.Generic;
-
-namespace ComfortGames.CharacterCustomization {
 
     [System.Serializable]
     public class GenderSaveData {
@@ -321,4 +311,4 @@ namespace ComfortGames.CharacterCustomization {
             }
         }
     }
-}
+

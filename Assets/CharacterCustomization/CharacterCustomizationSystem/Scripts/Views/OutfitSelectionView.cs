@@ -1,16 +1,7 @@
-﻿/******************************************************************************************************
-
-Copyright (c) Comfort Games and its affiliates. All rights reserved.
-Unless required by applicable law or agreed to in writing,
-the code is provided "AS IS" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
-******************************************************************************************************/
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ComfortGames.CharacterCustomization {
 
     public class OutfitSelectionView : MonoBehaviour {
 
@@ -26,10 +17,8 @@ namespace ComfortGames.CharacterCustomization {
         private List<OutfitCategoryView> outfitCategoryViewList = new List<OutfitCategoryView>();
 
         private List<OutfitView> outfitViewList = new List<OutfitView>();
-
-        private void Start() {
-
-            OutfitController outfitController = CharacterCustomizationFinderManager.GetOutfitController();
+    private void Start() {
+        OutfitController outfitController = CharacterCustomizationFinderManager.GetOutfitController();
 
             //Outfit Categories
             for (int i = 0; i < outfitController.numOutfitCategoryModels; i++) {
@@ -151,5 +140,5 @@ namespace ComfortGames.CharacterCustomization {
             }
         }
     }
-}
+
 

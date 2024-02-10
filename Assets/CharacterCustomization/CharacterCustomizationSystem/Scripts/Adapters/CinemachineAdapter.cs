@@ -1,17 +1,7 @@
-﻿/******************************************************************************************************
-
-Copyright (c) Comfort Games and its affiliates. All rights reserved.
-Unless required by applicable law or agreed to in writing,
-the code is provided "AS IS" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
-******************************************************************************************************/
-
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 using System.Reflection;
 
-namespace ComfortGames.CharacterCustomization
-{
     public class CinemachineAdapter : MonoBehaviour
     {
         [Tooltip("Name of the object that has the cinemachineStateDrivenCamera component")]
@@ -71,4 +61,3 @@ namespace ComfortGames.CharacterCustomization
             animatedTargetPropertyInfo?.SetValue(cinemachineStateDrivenCamera, animator);
         }
     }
-}

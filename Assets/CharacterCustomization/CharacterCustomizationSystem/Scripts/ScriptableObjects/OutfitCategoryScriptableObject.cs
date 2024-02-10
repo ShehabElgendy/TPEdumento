@@ -1,14 +1,4 @@
-﻿/******************************************************************************************************
-
-Copyright (c) Comfort Games and its affiliates. All rights reserved.
-Unless required by applicable law or agreed to in writing,
-the code is provided "AS IS" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
-******************************************************************************************************/
-
-using UnityEngine;
-
-namespace ComfortGames.CharacterCustomization {
+﻿using UnityEngine;
 
     [CreateAssetMenu(fileName = "NewOutfitCategory", menuName = "ScriptableObjects/OutfitCategoryScriptableObject", order = 2)]
     public class OutfitCategoryScriptableObject : ScriptableObject {
@@ -30,4 +20,3 @@ namespace ComfortGames.CharacterCustomization {
         [Tooltip("CategoryZoom is an optional float that sets the FieldOfView of the camera when the Category is selected (if there is a TargetBoneName).")]
         public float categoryZoom;
     }
-}
