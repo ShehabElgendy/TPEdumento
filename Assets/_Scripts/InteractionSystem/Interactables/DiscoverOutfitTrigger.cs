@@ -5,6 +5,6 @@ public class DiscoverOutfitTrigger : InteractOnTrigger
     public void DiscoverBelt()
     {
         FindObjectOfType<DiscoverOutfit>().HandleDiscoverOutfitButton();
-        Destroy(GetComponentInParent<BoxCollider>().gameObject);
+        Debug.Log("Doscover Belt !");
     }
 }

@@ -602,8 +602,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5982143547144989859}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: ActivateCanvasWithTranslatedText
+        m_TargetAssemblyTypeName: DialogueCanvasController, Assembly-CSharp
+        m_MethodName: ActivateCanvasWithText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2868,7 +2868,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 627581345}
-  - component: {fileID: 627581344}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -2876,27 +2875,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &627581344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627581343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5235418e4586c1b4a88133a4a60a6e2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogue: {fileID: 2099550132}
-  characterIcon: {fileID: 168086261}
-  characterName: {fileID: 351311250}
-  dialogueArea: {fileID: 1467516718}
-  typingSpeed: 0.05
-  animator: {fileID: 2099550134}
-  DialougePhraseKey:
-  - Wizard1
-  - Wizard2
 --- !u!4 &627581345
 Transform:
   m_ObjectHideFlags: 0
@@ -4354,7 +4332,6 @@ GameObject:
   - component: {fileID: 1107256356}
   - component: {fileID: 1107256357}
   - component: {fileID: 1107256359}
-  - component: {fileID: 1107256358}
   m_Layer: 6
   m_Name: DiscoverTrigger
   m_TagString: Untagged
@@ -4398,20 +4375,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.72
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1107256358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107256355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0d1434695a072d4391e71642826b035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outfitScriptableObject: {fileID: 11400000, guid: e500ff0a64dfc2649895e90ec012da56,
-    type: 2}
 --- !u!114 &1107256359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4426,7 +4389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 8
   OnEnter:
     m_PersistentCalls:
       m_Calls:
@@ -7326,7 +7289,6 @@ GameObject:
   - component: {fileID: 1792606418}
   - component: {fileID: 1792606420}
   - component: {fileID: 1792606421}
-  - component: {fileID: 1792606422}
   m_Layer: 6
   m_Name: WizardTrigger
   m_TagString: Untagged
@@ -7390,19 +7352,7 @@ MonoBehaviour:
       m_Calls: []
   OnExit:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 627581344}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: EndDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -7418,43 +7368,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1792606422}
-        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnInteractFinish:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1792606422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792606417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 320046cdb798b5644bdc4f0f81b526ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    dialogueLines:
-    - character:
-        name: Ivy
-        icon: {fileID: 21300000, guid: c95062126ad471545960ea53144e9b5b, type: 3}
-      line: Hi, How are you
-    - character:
-        name: Wizard
-        icon: {fileID: 21300000, guid: 58cab0bc1676a054697b92708334f139, type: 3}
-      line: It looks like a sunny day
 --- !u!1 &1831099918
 GameObject:
   m_ObjectHideFlags: 0
@@ -8090,6 +8006,7 @@ GameObject:
   - component: {fileID: 2039909241}
   - component: {fileID: 2039909240}
   - component: {fileID: 2039909239}
+  - component: {fileID: 2039909242}
   m_Layer: 0
   m_Name: Discover
   m_TagString: Untagged
@@ -8186,6 +8103,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039909236}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2039909242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039909236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d1434695a072d4391e71642826b035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outfitScriptableObject: {fileID: 11400000, guid: e500ff0a64dfc2649895e90ec012da56,
+    type: 2}
 --- !u!1 &2056456512
 GameObject:
   m_ObjectHideFlags: 0
@@ -15610,8 +15541,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5982143547144989859}
-        m_TargetAssemblyTypeName: Gamekit3D.DialogueCanvasController, Assembly-CSharp
-        m_MethodName: ActivateCanvasWithTranslatedText
+        m_TargetAssemblyTypeName: DialogueCanvasController, Assembly-CSharp
+        m_MethodName: ActivateCanvasWithText
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
