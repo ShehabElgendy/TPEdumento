@@ -1,0 +1,60 @@
+﻿/******************************************************************************************************
+
+Copyright (c) Comfort Games and its affiliates. All rights reserved.
+Unless required by applicable law or agreed to in writing,
+the code is provided "AS IS" WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+******************************************************************************************************/
+
+using UnityEngine;
+
+namespace ComfortGames.CharacterCustomization {
+
+    public class CharacterSpawning : MonoBehaviour {
+
+        public enum SpawnType {
+            DATA_DRIVEN,
+            MALE,
+            FEMALE
+        }
+        public SpawnType spawnType;
+
+        public GameObject characterBuilderFemale;
+        public GameObject characterBuilderMale;
+        
+        private void Awake() {
+
+            CharacterCustomizerSaveData data = CharacterCustomizationFinderManager.GetSaveManager().LoadFile();
+
+            if (data == null)
+                return;
+
+            GameObject characterObject = null;
+            switch(spawnType)
+            {
+                case SpawnType.FEMALE:
+                    characterObject = Instantiate(characterBuilderFemale, transform.position, transform.rotation);
+                    break;
+                case SpawnType.MALE:
+                    characterObject = Instantiate(characterBuilderMale, transform.position, transform.rotation);
+                    break;
+                case SpawnType.DATA_DRIVEN:
+                    //Data Driven
+                    if (data.gender == CharacterCustomizerSaveData.Gender.FEMALE)
+                    {
+                        characterObject = Instantiate(characterBuilderFemale, transform.position, transform.rotation);
+                    }
+
+                    if (data.gender == CharacterCustomizerSaveData.Gender.MALE)
+                    {
+                        characterObject = Instantiate(characterBuilderMale, transform.position, transform.rotation);
+                    }
+                    break;
+            }
+            
+            //If the controller uses cinemachine
+            GetComponent<CinemachineAdapter>()?.SetupCinemachine(characterObject);
+        }
+    }
+}
+

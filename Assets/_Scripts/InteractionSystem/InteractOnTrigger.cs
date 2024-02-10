@@ -6,7 +6,7 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 {
     public LayerMask layers;
 
-    public UnityEvent OnEnter, OnExit, OnInteract;
+    public UnityEvent OnEnter, OnExit, OnInteract, OnInteractFinish;
 
     protected new Collider collider;
 
@@ -43,8 +43,6 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
 
     public bool Interact(Interactor _interactor)
     {
-        isInteracted = !isInteracted;
-
         if (isInteracted)
         {
             DisableEmission();
@@ -54,9 +52,15 @@ public class InteractOnTrigger : MonoBehaviour, IInteractable
             EnableEmission();
         }
 
+        isInteracted = !isInteracted;
         OnInteract.Invoke();
 
         return true;
+    }
+
+    protected virtual void InteractFinish()
+    {
+        OnInteract.Invoke();
     }
 
     protected virtual void DisableEmission()

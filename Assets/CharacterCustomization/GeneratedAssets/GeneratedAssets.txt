@@ -1,0 +1,2 @@
+Generated assets are created in this folder.
+This text file is added so that the folder is included with the package.

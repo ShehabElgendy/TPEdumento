@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b985fbc595367ab449f5716f944f9950, type: 3}
+  m_Name: Outfit4_Legs01
+  m_EditorClassIdentifier: 
+  outfitName: Chan Legs
+  outfitIcon: {fileID: 21300000, guid: 43eb838d6c2c8764cb542326f95ac914, type: 3}
+  isInvisible: 0
+  isLocked: 0
+  sortingOrder: 10
+  outfitCategoryScriptableObject: {fileID: 11400000, guid: bb64a794e69d6194fb92d2f4b1e9fda3,
+    type: 2}
+  outfitPieces:
+  - {fileID: 2936302133409929356, guid: 5179bc226a0b56040bd266ba36aede49, type: 3}

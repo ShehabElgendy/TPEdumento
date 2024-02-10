@@ -18,6 +18,7 @@ public class Interactor : MonoBehaviour
 
     private IInteractable interactable;
 
+
     public virtual void Interact()
     {
         interactablesFound = Physics.OverlapSphereNonAlloc(interactionPoint.position, interactionPointRadius, colliders, interactableMask);

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b985fbc595367ab449f5716f944f9950, type: 3}
+  m_Name: Outfit2_Shirts01
+  m_EditorClassIdentifier: 
+  outfitName: Shirt
+  outfitIcon: {fileID: 21300000, guid: 0b3534184deb5ef479d8aedc1eb85be5, type: 3}
+  isInvisible: 0
+  isLocked: 0
+  sortingOrder: 0
+  outfitCategoryScriptableObject: {fileID: 11400000, guid: 36c4650f1e5ca03479da463bdcd84c19,
+    type: 2}
+  outfitPieces:
+  - {fileID: 3303130745884428564, guid: a8d0f9c56a67edb4cb8779107bf4ff71, type: 3}
+  rendererObjectNames: []
+  checkOutsideRoot: 0

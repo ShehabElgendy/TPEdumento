@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b985fbc595367ab449f5716f944f9950, type: 3}
+  m_Name: Outfit8_Shoes01
+  m_EditorClassIdentifier: 
+  outfitName: Shoes
+  outfitIcon: {fileID: 21300000, guid: 31e00b499c1fdb24ba5be7aee1411001, type: 3}
+  isInvisible: 0
+  isLocked: 1
+  sortingOrder: 0
+  outfitCategoryScriptableObject: {fileID: 11400000, guid: 86309fcad88795b4daa79c72b078de30,
+    type: 2}
+  outfitPieces:
+  - {fileID: 5643933360168227323, guid: 6b6feb72563ded142afbf2c8b7a07772, type: 3}
+  rendererObjectNames: []
+  checkOutsideRoot: 0
