@@ -15,6 +15,7 @@ MonoBehaviour:
   categoryName: Legs
   sortingOrder: 0
   isInvisible: 0
-  defaultOutfitScriptableObject: {fileID: 0}
+  defaultOutfitScriptableObject: {fileID: 11400000, guid: ce2ab95824821b046b22930b4f603455,
+    type: 2}
   targetBoneName: 
   categoryZoom: 25

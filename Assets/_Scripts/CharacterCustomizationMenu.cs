@@ -8,12 +8,12 @@ public class CharacterCustomizationMenu : MonoBehaviour
     StarterAssetsInputs player;
     private void Start()
     {
-        GameManager.Instance.GameStates = GameManager.GameState.UnlockCursor;
+        GameManager.Instance.CurrentGameState = GameManager.GameState.UnlockCursor;
         player = FindObjectOfType<StarterAssetsInputs>();
     }
     public void StartGameState()
     {
-        GameManager.Instance.GameStates = GameManager.GameState.GamePlay;
+        GameManager.Instance.CurrentGameState = GameManager.GameState.GamePlay;
     }
 
     private void Update()

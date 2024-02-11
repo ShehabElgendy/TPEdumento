@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public GameState GameStates;
+    public GameState CurrentGameState;
 
     private StarterAssetsInputs starterAssetsInputs;
 
@@ -33,38 +33,32 @@ public class GameManager : MonoBehaviour
         GamePlay
     }
 
-    public void Update()
+    public void ChangeGameState(GameState state)
     {
-        switch (GameStates)
+        switch (CurrentGameState)
         {
             case GameState.None:
                 break;
             case GameState.MainMenu:
                 break;
             case GameState.UnlockCursor:
-                DisablePlayerInput();
                 break;
             case GameState.GamePlay:
-                EnablePlayerInput();
                 break;
             default:
                 break;
         }
 
-        if(Input.GetKey(KeyCode.Q))
-        {
-            SceneManager.LoadScene("CharacterCustomization02_Gender");
-            Cursor.lockState = CursorLockMode.None;
-        }
+        CurrentGameState = state;
     }
 
-    public void DisablePlayerInput()
+    public void SwitchToGamePlay()
     {
-            starterAssetsInputs?.SetCursorState(false);
+        CurrentGameState = GameState.GamePlay;
     }
 
-    public void EnablePlayerInput()
+    public void SwitchToUnlockCursor()
     {
-            starterAssetsInputs?.SetCursorState(true);
+        CurrentGameState = GameState.UnlockCursor;
     }
 }

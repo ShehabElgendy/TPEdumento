@@ -40,6 +40,11 @@ namespace Inworld.Sample
         {
             if (!m_CameraTransform)
                 m_CameraTransform = PlayerController.Instance.transform;
+
+            //Set Camera Parent to be the player to look at his/her face
+            GameObject _player = GameObject.FindGameObjectWithTag("Player");
+            m_CameraTransform.SetParent(_player.transform);
+            m_CameraTransform.transform.localPosition = new Vector3(0f,1.7f,0f);
         }
 
         void Update()

@@ -20,6 +20,6 @@ MonoBehaviour:
   outfitCategoryScriptableObject: {fileID: 11400000, guid: e67e101f45d86324bb4fc8ce064a9475,
     type: 2}
   outfitPieces:
-  - {fileID: 1995915712923458398, guid: 4b5a19a85b9a94040b77f22cada06b59, type: 3}
+  - {fileID: 5191531480955699571, guid: 70f9e06ca6165524aa13490ce1a7b1dd, type: 3}
   rendererObjectNames: []
   checkOutsideRoot: 0

@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -19,8 +18,8 @@ namespace StarterAssets
         public bool analogMovement;
 
         [Header("Mouse Cursor Settings")]
-        public bool cursorLocked = true;
-        public bool cursorInputForLook = true;
+        public bool cursorLocked;
+        public bool cursorInputForLook;
 
         private Interactor interactor;
 
@@ -34,6 +33,16 @@ namespace StarterAssets
         {
             InputSystem.settings.updateMode = InputSettings.UpdateMode.ProcessEventsInDynamicUpdate;
         }
+
+
+        private void Update()
+        {
+            if (GameManager.Instance.CurrentGameState == GameManager.GameState.GamePlay)
+                SetCursorState(true);
+            else
+                SetCursorState(false);
+        }
+
 
         public void OnMove(InputAction.CallbackContext ctx)
         {
@@ -131,12 +140,6 @@ namespace StarterAssets
         public void InteractInput(bool newInteractState)
         {
             interact = newInteractState;
-        }
-
-
-        private void OnApplicationFocus(bool hasFocus)
-        {
-            SetCursorState(hasFocus);
         }
 
         public void SetCursorState(bool newState)
