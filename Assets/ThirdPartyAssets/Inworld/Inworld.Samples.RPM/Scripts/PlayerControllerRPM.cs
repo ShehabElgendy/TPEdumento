@@ -35,15 +35,19 @@ namespace Inworld.Sample.RPM
             base.HandleInput();
             if (Input.GetKeyUp(KeyCode.BackQuote))
             {
-                m_CameraController.enabled = !m_ChatCanvas.activeSelf;
-                //Cursor.visible = true;
-                //Cursor.lockState = CursorLockMode.None;
+               if (m_CameraController.enabled = !m_ChatCanvas.activeSelf)
+                {
+                    Cursor.visible = false;
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
+                else if (m_CameraController.enabled = m_ChatCanvas.activeSelf)
+                {
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                }
+
             }
-            else if (m_CameraController.enabled = !m_ChatCanvas.activeSelf)
-            {
-                //Cursor.visible = false;
-                //Cursor.lockState = CursorLockMode.Locked;
-            }
+
         }
     }
 }
