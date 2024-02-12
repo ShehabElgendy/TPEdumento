@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
 
     public GameState CurrentGameState;
 
-    private StarterAssetsInputs starterAssetsInputs;
-
     private void Awake()
     {
         if (Instance == null)
@@ -18,11 +16,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(Instance);
-    }
-
-    private void Start()
-    {
-        starterAssetsInputs = FindObjectOfType<StarterAssetsInputs>();
     }
 
     public enum GameState
