@@ -2046,7 +2046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627581345}
   m_Layer: 0
-  m_Name: InfoZoneManager
+  m_Name: UI_InfoZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22199,9 +22199,9 @@ SceneRoots:
   - {fileID: 4762801172880213765}
   - {fileID: 1401059363}
   - {fileID: 1912475508623287855}
+  - {fileID: 627581345}
   - {fileID: 8063073396654575536}
   - {fileID: 2006458081}
-  - {fileID: 627581345}
   - {fileID: 3753617578377580391}
   - {fileID: 330290069}
   - {fileID: 1607814259}
