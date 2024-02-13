@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 
 
-public class DialogueCanvasController : MonoBehaviour
+public class InfoZoneController : MonoBehaviour
 {
     public Animator animator;
     public TextMeshProUGUI textMeshProUGUI;
@@ -41,7 +41,6 @@ public class DialogueCanvasController : MonoBehaviour
 
         gameObject.SetActive(true);
         animator.SetBool(m_HashActivePara, true);
-        textMeshProUGUI.text = Translator.Instance[phraseKey];
     }
 
     public void DeactivateCanvasWithDelay(float delay)

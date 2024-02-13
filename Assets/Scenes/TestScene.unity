@@ -8904,7 +8904,7 @@ GameObject:
   - component: {fileID: 1449694860145487613}
   - component: {fileID: 5982143547144989859}
   m_Layer: 5
-  m_Name: DialogueCanvas
+  m_Name: InfoZoneCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21496,7 +21496,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.972549, g: 0.9607843, b: 0.8784314, a: 1}
-  m_Intensity: 1.2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
