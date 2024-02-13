@@ -1,6 +1,9 @@
+using HoaxGames;
+using Lean.Touch;
 using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharacterCustomizationMenu : MonoBehaviour
@@ -10,7 +13,10 @@ public class CharacterCustomizationMenu : MonoBehaviour
     {
         GameManager.Instance.CurrentGameState = GameManager.GameState.UnlockCursor;
         player = FindObjectOfType<StarterAssetsInputs>();
-    }
+
+        player.AddComponent<LeanTwistRotateAxis>();
+        player.GetComponent<FootIK>().enabled = false;
+        }
     public void StartGameState()
     {
         GameManager.Instance.CurrentGameState = GameManager.GameState.GamePlay;
