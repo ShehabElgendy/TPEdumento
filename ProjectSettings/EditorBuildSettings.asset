@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: 0fbdc41735013e6499e80278662ac371
   - enabled: 1
     path: Assets/Scenes/CharacterCustomization04_Female.unity
-    guid: a28609e67f9dd074080e8bd1f15f93b0
+    guid: 2744049ab35183a4e88d36f96cc05a84
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: e2ca82c0c66ea804399eef40daa96bb9

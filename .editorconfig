@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# USG0001: Error with Additional file for Unity Source Generator
+dotnet_diagnostic.USG0001.severity = none

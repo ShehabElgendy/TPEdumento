@@ -1,56 +1,51 @@
 ﻿
 using UnityEngine;
 
-namespace ComfortGames.CharacterCustomization
+public class BuyOutfit : MonoBehaviour
 {
 
-    public class BuyOutfit : MonoBehaviour
+    public OutfitScriptableObject outfitScriptableObject;
+
+    private void Start()
     {
 
-        public OutfitScriptableObject outfitScriptableObject;
-
-        private void Start()
+        if (outfitScriptableObject == null)
         {
-
-            if (outfitScriptableObject == null)
-            {
-                Debug.Log("BuyOutfit - outfitScriptableObject = null");
-                return;
-            }
-
-            if (outfitScriptableObject.isLocked)
-            {
-                if (CharacterCustomizationFinderManager.GetOutfitController().becameUnlockedOutfits.Contains(outfitScriptableObject))
-                {
-                    gameObject.SetActive(false);
-                }
-            }
+            Debug.Log("BuyOutfit - outfitScriptableObject = null");
+            return;
         }
 
-        public void HandleBuyOutfitButton()
+        if (outfitScriptableObject.isLocked)
         {
-
-            HandleBuyOutfit();
-            gameObject.SetActive(false);
-        }
-
-        private void HandleBuyOutfit()
-        {
-
-            if (outfitScriptableObject == null)
+            if (CharacterCustomizationFinderManager.GetOutfitController().becameUnlockedOutfits.Contains(outfitScriptableObject))
             {
-                Debug.Log("BuyOutfit - outfitScriptableObject = null");
-                return;
+                gameObject.SetActive(false);
             }
-
-            if (!outfitScriptableObject.isLocked)
-            {
-                Debug.Log("BuyOutfit - outfitScriptableObject must be configured to be Locked before it can be bought.");
-                return;
-            }
-
-            CharacterCustomizationFinderManager.GetOutfitController().BuyOutfit(outfitScriptableObject);
         }
     }
 
+    public void HandleBuyOutfitButton()
+    {
+            HandleBuyOutfit();
+            gameObject.SetActive(false);
+    }
+
+    private void HandleBuyOutfit()
+    {
+
+        if (outfitScriptableObject == null)
+        {
+            Debug.Log("BuyOutfit - outfitScriptableObject = null");
+            return;
+        }
+
+        if (!outfitScriptableObject.isLocked)
+        {
+            Debug.Log("BuyOutfit - outfitScriptableObject must be configured to be Locked before it can be bought.");
+            return;
+        }
+
+        CharacterCustomizationFinderManager.GetOutfitController().BuyOutfit(outfitScriptableObject);
+    }
 }
+

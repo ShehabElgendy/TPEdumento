@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Outfit8_Shoes01
   m_EditorClassIdentifier: 
   outfitName: Shoes
+  outfitPrice: 1
   outfitIcon: {fileID: 21300000, guid: 31e00b499c1fdb24ba5be7aee1411001, type: 3}
   isInvisible: 0
   isLocked: 1

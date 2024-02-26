@@ -700,6 +700,7 @@ MonoBehaviour:
   content: {fileID: 2331276160600982953}
   hiddenImage: {fileID: 3647486521291846159}
   nameText: {fileID: 4064144110997195338}
+  priceText: {fileID: 0}
   outfitImage: {fileID: 1731141444935046845}
   outfitEquippedImage: {fileID: 2254288123810045529}
   outfitLockedImage: {fileID: 7168677881510995082}
